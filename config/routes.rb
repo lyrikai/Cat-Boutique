@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :profils 
   
   resources :products
+
+  resources :carts
 end
