@@ -6,12 +6,23 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 #   Character.create(name: "Luke", movie: movies.first)
-
-Products.destroy_all
-
+Product.destroy_all
+Cart.destroy_all
 
 20.times do 
 
     products = Product.create(title: Faker::Creature::Cat.name, description: Faker::Lorem.paragraph, price: Faker::Number.within(range: 10..100), stock: 50)
 
+end
+productsf = Product.first.id
+userf = User.first.id
+
+20.times do
+    userff = User.find(1)
+
+    productsrand = rand(0..19) 
+    productstotal = productsrand + productsf
+    productsff = Product.find(productstotal)
+
+    cart = Cart.create(user: userff, product: productsff)
 end

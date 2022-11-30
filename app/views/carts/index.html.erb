@@ -1,0 +1,11 @@
+<h1>Mon Panier</h1>
+
+<% @cartlist.each do |i|%>
+
+<p> Produit :<%= i.product.title%></p>
+
+<p> Prix: <%= i.product.price%> €</p>
+
+<%= link_to 'Supprimer du panier', cart_path(i), data: {turbo_method: :delete} %>
+ <p> ----------------- </p>
+<% end%>

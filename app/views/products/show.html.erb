@@ -4,3 +4,15 @@
 <p><%= @prod.description%></p>
 <p><%= @prod.price%></p>
 <p><%= @prod.stock%></p>
+
+<p><%= @prod.stock%>add </p>
+
+
+
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+
+      <%= hidden_field_tag 'id', @prod.id %>
+
+      <%= submit_tag "add" %>
+
+<% end %> 
