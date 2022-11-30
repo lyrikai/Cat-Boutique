@@ -2,7 +2,6 @@ class CartsController < ApplicationController
 
     def index
         @cartlist = Cart.where(user: current_user)
-        puts @cartlist
     end
 
     def destroy
