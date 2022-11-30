@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: 738935a01c2cdc7d5c141f80e8257bb562335ab1
+  revision: 1c284023ba4f47794a9236b84d8f8080747bcfb2
   branch: main
   specs:
     faker (3.0.0)
@@ -120,7 +120,7 @@ GEM
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.5.11)
-    irb (1.5.0)
+    irb (1.5.1)
       reline (>= 0.3.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
@@ -216,7 +216,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    stimulus-rails (1.1.1)
+    stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     stripe (8.0.0)
     table_print (1.5.7)
@@ -280,4 +280,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.2.3
+   2.3.7

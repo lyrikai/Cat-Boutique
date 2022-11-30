@@ -1,6 +1,6 @@
 
 <div class="container">
-<h1 class="text-center"> Bienvenue sur la page d'acceuil</h1>
+<h1 class="text-center"> Bienvenue sur la page d'accueil</h1>
 
 <% @catlist.each do |i| %>
     <p> <%=i.title%></p>
@@ -9,6 +9,5 @@
 
 
 <%end%>
-
-
+<%= button_to "Payer", checkout_create_path(total: 1),data: { turbo: false }, class: "btn btn-primary"%>
 </div>
