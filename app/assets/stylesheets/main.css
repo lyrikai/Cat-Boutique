@@ -25,3 +25,6 @@
 #carousel{
   padding: 10px;
 }
+nav{
+  z-index: 1000;
+}

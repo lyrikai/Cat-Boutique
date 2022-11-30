@@ -1,14 +1,7 @@
 
 <div class="container">
     <h1 class="text-center" style="padding: 20px;"> Bienvenue amoureux des boules de poil</h1>
-    <!--
-    <% @catlist.each do |i| %>
-        <p> <%=i.title%></p>
-        <a href="<%= product_path(i.id)%>">Voir l'image</a>
-        <p>-----------</p>
-
-
-    <%end %>-->
+   
 
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner" id="carousel">
@@ -31,4 +24,12 @@
         <span class="visually-hidden">Next</span>
     </button>
     </div>
+
+    <% @catlist.each do |i| %>
+    <p> <%=i.title%></p>
+    <a href="<%= product_path(i.id)%>">Voir l'image</a>
+    <p>-----------</p>
+    <%end%>
 </div>
+
+
