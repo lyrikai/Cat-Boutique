@@ -1,0 +1,2 @@
+<%= number_to_currency(@payment_intent.amount_received / 100.0, unit: "€", separator: ",", delimiter: "", format: "%n %u") %>.
+<%= @payment_intent.status %>
