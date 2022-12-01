@@ -1,0 +1,11 @@
+ <h1>Voici La liste de vos achats </h1>
+
+ <%if @orderlist != nil%>
+
+ <% @orderlist.each do |i| %>
+
+    <p> <%=i.title%></p>
+    <p> <%=i.price%> €</p>
+    <p>-----------</p>
+<%end%>
+<%end%>

@@ -1,0 +1,4 @@
+<h1>Votre commande est validé </h1>
+
+<p>Pour un montant de <%= number_to_currency(@payment_intent.amount_received / 100.0, unit: "€", separator: ",", delimiter: "", format: "%n %u") %></p>
+<% @payment_intent.status %>
