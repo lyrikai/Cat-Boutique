@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   
   resources :products
 
+  resources :admin
+  
+  resources :buys
 
   scope '/checkout' do
     post 'create', to: 'checkout#create', as: 'checkout_create'

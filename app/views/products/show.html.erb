@@ -7,6 +7,13 @@
 <p><%= @prod.description%></p>
 <p><%= @prod.price%>€</p>
 <p><%= @prod.stock%> restant</p>
+<p><%= @prod.price%></p>
+<p><%= @prod.stock%></p>
+<% if @prod.image.attached? %>
+  <%= image_tag @prod.image %>
+<% end %>
+<p><%= @prod.stock%>add </p>
+
 
 
 <%= form_tag url_for(action: 'create'), method: "post" do %>
