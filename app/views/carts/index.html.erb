@@ -6,6 +6,11 @@
 
 <p> Prix: <%= i.product.price%> €</p>
 
+
+<% if i.product.image.attached? %>
+  <%= image_tag i.product.image %>
+<% end %>
+
 <%= link_to 'Supprimer du panier', cart_path(i), data: {turbo_method: :delete} %>
  <p> ----------------- </p>
 <% end%>

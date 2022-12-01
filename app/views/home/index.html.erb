@@ -1,9 +1,11 @@
 
 <div class="container">
 <h1 class="text-center"> Bienvenue sur la page d'accueil</h1>
-
 <% @catlist.each do |i| %>
     <p> <%=i.title%></p>
+    <% if i.image.attached? %>
+        <%= image_tag i.image %>
+    <% end %>
     <a href="<%= product_path(i.id)%>">Voir l'image</a>
     <p>-----------</p>
 <%end%>
