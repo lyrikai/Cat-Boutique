@@ -1,34 +1,44 @@
-<%=current_user.first_name%>
-<%=current_user.last_name%>
-<%=current_user.email%>
+<div class="background_jumbotron">
+  <div class="container" style="width: 18rem;">
+    <h2 style="text-align:center; padding: 20px">Formulaire d'informations</h2>
+    <br>
+    <div class="card-info" style="text-align:start; padding: 20px">
+      <p>Prénom enregistré: <%=current_user.first_name%></p>
+      <p>Nom enregistré: <%=current_user.last_name%></p>
+      <p>Email enregistré: <%=current_user.email%></p>
+    </div>
+    <div id="card" style="text-align:center;">
 
-<%= form_tag url_for(action: 'create'), method: "post" do %>
+      <%= form_tag url_for(action: 'create'), method: "post" do %>
 
-      <%= label_tag 'first_name' %>
-      <%= text_field_tag 'first_name', @post %>
-      <br /> <br />
+            <%= label_tag 'first_name' %>
+            <%= text_field_tag 'first_name', @post %>
+            <br /> <br />
 
-      <%= label_tag 'last_name' %>
-      <%= text_area_tag 'last_name', @post %>
-      <br /> <br />
+            <%= label_tag 'last_name' %>
+            <%= text_area_tag 'last_name', @post %>
+            <br /> <br />
 
 
-      <%= label_tag 'address' %>
-      <%= text_field_tag 'address', @post %>
-      <br /> <br />
+            <%= label_tag 'address' %>
+            <%= text_field_tag 'address', @post %>
+            <br /> <br />
 
-    <%= label_tag 'city' %>
-      <%= text_field_tag 'city', @post %>
-      <br /> <br />
+            <%= label_tag 'city' %> <br>
+            <%= text_field_tag 'city', @post %>
+            <br /> <br />
 
-      <%= label_tag 'country' %>
-      <%= text_field_tag 'country', @post %>
-      <br /> <br />
+            <%= label_tag 'country' %>
+            <%= text_field_tag 'country', @post %>
+            <br /> <br />
 
-      <%= label_tag 'zip_code' %>
-      <%= text_field_tag 'zip_code', @post %>
-      <br /> <br />
+            <%= label_tag 'zip_code' %>
+            <%= text_field_tag 'zip_code', @post %>
+            <br /> <br />
 
-      <%= submit_tag "Send" %>
+            <%= submit_tag "Send", class:"btn btn-outline-secondary" %>
 
-<% end %> 
+      <% end %> 
+    </div>
+  </div>
+</div>

@@ -1,18 +1,19 @@
-<h1>dfhhsd</h1>
-
-<p><%= @prod.title%></p>
+<h1 style="text-align: center; padding: 20px">Nous vous présentons</h1>
+<div >
+  <img id="pict-shop" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80" >
+</div>
+<div id="shop-right">
+<h2 class="text-info"><%= @prod.title%></h2>
 <p><%= @prod.description%></p>
-<p><%= @prod.price%></p>
-<p><%= @prod.stock%></p>
-
-<p><%= @prod.stock%>add </p>
-
+<p><%= @prod.price%>€</p>
+<p><%= @prod.stock%> restant</p>
 
 
 <%= form_tag url_for(action: 'create'), method: "post" do %>
 
       <%= hidden_field_tag 'id', @prod.id %>
 
-      <%= submit_tag "add" %>
+      <%= submit_tag "Ajouter au panier", class:"btn btn-outline-primary" %>
 
 <% end %> 
+<div>

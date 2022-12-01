@@ -1,6 +1,6 @@
 <div class="background_jumbotron">
   <div class="container" style="width: 18rem;">
-    <h2 style="text-align:center;">Sign up</h2>
+    <h2 style="text-align:center; padding: 20px">Sign up</h2>
     <br>
     <div id="card" style="text-align:center;">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -25,7 +25,7 @@
         </div>
         <br>
         <div class="actions">
-          <%= f.submit "Sign up" %>
+          <%= f.submit "Sign up", class: "btn btn-outline-secondary" %>
         </div>
       <% end %>
       <br>
@@ -33,4 +33,3 @@
     </div>
   </div>
 </div>
-<%# <img class="background_jumbotron" src="https://images.unsplash.com/photo-1571570703598-39eb580a0329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"> %>

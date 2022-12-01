@@ -25,11 +25,21 @@
     </button>
     </div>
 
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="cards">
     <% @catlist.each do |i| %>
-    <p> <%=i.title%></p>
-    <a href="<%= product_path(i.id)%>">Voir l'image</a>
-    <p>-----------</p>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-title"> <%=i.title%></p>
+                    <a href="<%= product_path(i.id)%>" class="card-text">Voir l'image</a>
+                    <%# <p>-----------</p> %>
+                </div>
+            </div>
+        </div>
+    </div>
     <%end%>
+    
 </div>
 
 
