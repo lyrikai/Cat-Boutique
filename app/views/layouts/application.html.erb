@@ -40,6 +40,9 @@
                   <li class="dropdown-item"><a href=<%=new_user_registration_path %> class="nav-link">Sign up</a></li>
                   <li class="dropdown-item"><a href=<%=new_user_session_path %> class="nav-link">Sign in</a></li>
                 <% end %>
+                <% if current_user.admin? %>
+                <li class="nav-item"><a href="/admin" class="btn btn-success">Ajouter un produit</a></li>
+                <% end %>        
               </ul>
             </li>
           </ul>
