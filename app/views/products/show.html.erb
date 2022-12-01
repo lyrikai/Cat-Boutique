@@ -1,26 +1,41 @@
-<h1 style="text-align: center; padding: 20px">Nous vous présentons</h1>
-<div >
-  <img id="pict-shop" src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80" >
-</div>
-<div id="shop-right">
-<h2 class="text-info"><%= @prod.title%></h2>
-<p><%= @prod.description%></p>
-<p><%= @prod.price%>€</p>
-<p><%= @prod.stock%> restant</p>
-<p><%= @prod.price%></p>
-<p><%= @prod.stock%></p>
-<% if @prod.image.attached? %>
-  <%= image_tag @prod.image %>
-<% end %>
-<p><%= @prod.stock%>add </p>
-
-
-
-<%= form_tag url_for(action: 'create'), method: "post" do %>
+<section style="background-color: #eee;">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 col-xl-4">
+        <div class="card text-black">
+          <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
+       <% if @prod.image.attached? %>
+    <%= image_tag @prod.image %>
+  <% end %>
+          <div class="card-body">
+            <div class="text-center">
+              <h5 class="card-title"><%= @prod.title%></h5>
+              <p class="text-muted mb-4" style="font-size: 12px;"><%= @prod.description%></p>
+            </div>
+            <div>
+              <div class="d-flex justify-content-between">
+               
+              </div>
+              <div class="d-flex justify-content-between">
+                <span>Stock </span><span>50</span>
+              </div>
+              <div class="d-flex justify-content-between">
+               <span>Prix</span><span><%= @prod.price%> €</span>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between total font-weight-bold mt-4">
+             <%= form_tag url_for(action: 'create'), method: "post" do %>
 
       <%= hidden_field_tag 'id', @prod.id %>
 
       <%= submit_tag "Ajouter au panier", class:"btn btn-outline-primary" %>
 
 <% end %> 
-<div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

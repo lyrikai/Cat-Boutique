@@ -79,6 +79,9 @@ gem 'devise'
 
 gem 'mailjet'
 
+
+gem 'base64'
+
 gem 'stripe'
 
 gem 'dotenv-rails', groups: [:development, :test]

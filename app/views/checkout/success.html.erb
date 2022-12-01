@@ -1,4 +1,8 @@
-<h1>Votre commande est validé </h1>
+<div class="jumbotron bannerr">
+  <h1 class="dh6 text-uppercase letter-spacing-2 mb-4">Paiment Valider</h1>
+  <p class=" text-uppercase letter-spacing-2 mb-4">Les photos de chat les plus cutes du web sont envoyer par email.</p>
 
-<p>Pour un montant de <%= number_to_currency(@payment_intent.amount_received / 100.0, unit: "€", separator: ",", delimiter: "", format: "%n %u") %></p>
+</div>
+
+<% number_to_currency(@payment_intent.amount_received / 100.0, unit: "€", separator: ",", delimiter: "", format: "%n %u") %>
 <% @payment_intent.status %>

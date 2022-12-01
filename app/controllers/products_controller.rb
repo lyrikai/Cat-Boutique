@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
         puts "-" * 60
 
         if @new.save 
-            redirect_to root_path
+            redirect_to carts_path
         else  
            
         end

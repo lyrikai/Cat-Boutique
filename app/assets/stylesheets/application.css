@@ -14,3 +14,62 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+    min-height: 100vh;
+    background-color: aquamarine;
+}
+
+.cart{
+    min-height: 100vh;
+}
+
+.ok{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 90px;
+}
+
+.paw{
+    background-image: url('ok.png');
+    background-position: center;
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.banner{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-image: url('cat.jpg');
+    background-position: bottom;
+    background-size: cover;
+}
+ .parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin-bottom: 150px;
+    }
+
+    img{
+        height: 250px;
+    }
+
+    .bannerr{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        
+        padding: 20px;
+        padding-top: 100px;
+        background-image: url('cat.webp');
+        background-position: bottom;
+        background-size: cover;
+    }

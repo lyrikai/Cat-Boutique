@@ -1,54 +1,52 @@
+<div class="jumbotron banner">
+  <h1 class="dh6 text-uppercase letter-spacing-2 mb-4">Cat Shop</h1>
+  <p class=" text-uppercase letter-spacing-2 mb-4">Les photos de chat les plus cutes du web.</p>
 
-<div class="container">
-<h1 class="text-center"> Bienvenue sur la page d'accueil</h1>
-    <h1 class="text-center" style="padding: 20px;"> Bienvenue amoureux des boules de poil</h1>
-   
-
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner" id="carousel">
-        <div class="carousel-item active">
-        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-        <img src="https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1229&q=80" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-        <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="d-block w-100" alt="...">
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-    </div>
-
-    <div class="row row-cols-1 row-cols-md-3 g-4" id="cards">
-    <% @catlist.each do |i| %>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://picsum.photos/id/237/200/300" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-title"> <%=i.title%></p>
-                    <a href="<%= product_path(i.id)%>" class="card-text">Voir l'image</a>
-                    <%# <p>-----------</p> %>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <p> <%=i.title%></p>
-    <% if i.image.attached? %>
-        <%= image_tag i.image %>
-    <% end %>
-    <a href="<%= product_path(i.id)%>">Voir l'image</a>
-    <p>-----------</p>
-    
-    <%end%>
-    
 </div>
 
+<!--   -->
+<div class="container py-7 text-center">
+      <div class="row roww">
+        <div class="col-sm-6 col-lg-4 mb-5">
+          <div class="mb-5 ok">
+            <div class="paw"></div>
+            <h3 class="h6 text-uppercase letter-spacing-2 mb-4">Migions</h3>
+            <p class="text-muted">This theme follows the latest design and typography trends.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-5">
+          <div class="mb-5 ok">
+           <div class="paw"></div>
+            <h3 class="h6 text-uppercase letter-spacing-2 mb-4">Doux</h3>
+            <p class="text-muted">Mutliple variants for category listings, product details. Dedicated e-commerce beautiful icon sets.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-5">
+          <div class="mb-5 ok ">
+            <div class="paw"></div>
+            <h3 class="h6 text-uppercase letter-spacing-2 mb-4">Gentils</h3>
+            <p class="text-muted">You can use it out-of-the-box, but if you need customizations, you will love the included Gulp &amp; SCSS toolkit.</p>
+          </div>
+        </div>          
+      </div>
+</div>
 
+<div class="container">
+    <div class="parent">
+
+        <% @catlist.each do |i| %>
+
+        <div class="card" style="width: 18rem;">
+        <% if i.image.attached? %>
+            <%= image_tag i.image %>
+        <% end %>
+        <div class="card-body">
+            <h5 class="card-title"> <%=i.title%></h5>
+            <p class="card-text">Prix: <%=i.price %> €</p>
+            <a href="<%= product_path(i.id)%>" class="btn btn-primary">Voir la Photo</a>
+        </div>
+        </div>
+    <% end %>
+        
+    </div>
+</div>

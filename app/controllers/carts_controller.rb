@@ -10,7 +10,7 @@ class CartsController < ApplicationController
         puts "-" * 60
         @gosid = Cart.find(params[:id])
         @gosid.destroy
-        redirect_to root_path
+        redirect_to carts_path
     end
 
     def show
