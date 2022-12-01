@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :admin
   
+  resources :buys
+
   scope '/checkout' do
     post 'create', to: 'checkout#create', as: 'checkout_create'
     get 'success', to: 'checkout#success', as: 'checkout_success'

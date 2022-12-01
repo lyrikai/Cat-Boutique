@@ -1,0 +1,13 @@
+#navbar{
+  box-shadow: rgba(255, 255, 255, 0.2) 1px 1px inset, rgba(255, 255, 255, 0.1) -1px -1px inset, rgba(0, 0, 0, 0.15) 1px 3px 24px -1px;
+  background-color: transparent;
+  background-image: linear-gradient(125deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2) 70%);
+  backdrop-filter: blur(5px);
+}
+
+#dropdown{
+  box-shadow: rgba(255, 255, 255, 0.2) 1px 1px inset, rgba(255, 255, 255, 0.1) -1px -1px inset, rgba(0, 0, 0, 0.15) 1px 3px 24px -1px;
+  background-color: transparent;
+  background-image: linear-gradient(125deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2) 70%);
+  backdrop-filter: blur(5px);
+}

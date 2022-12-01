@@ -1,6 +1,10 @@
 <h1>Mon Panier</h1>
 
+<% a = 0%>
+
 <% @cartlist.each do |i|%>
+
+<% a = a + i.product.price %>
 
 <p> Produit :<%= i.product.title%></p>
 
@@ -14,3 +18,7 @@
 <%= link_to 'Supprimer du panier', cart_path(i), data: {turbo_method: :delete} %>
  <p> ----------------- </p>
 <% end%>
+
+<p>Total: <%= a%>€</p>
+
+<%= button_to "Payer", checkout_create_path(total: a),data: { turbo: false }, class: "btn btn-primary"%>
