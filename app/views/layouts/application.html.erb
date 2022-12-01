@@ -34,6 +34,9 @@
               </a>
               <ul class="dropdown-menu"id="dropdown">
                 <% if user_signed_in? %>
+                  <% if current_user.admin? %>
+                  <li class="nav-item"><a href="/admin" class="btn btn-success">Ajouter un produit</a></li>
+                  <% end %> 
                   <li class="dropdown-item"><a href="profils/show" class="nav-link">Profil</a></li>
                   <li class="dropdown-item"><a href=<%=destroy_user_session_path%> class="nav-link">Sign out</a></li>
                   <li class="dropdown-item"><a href=<%= carts_path%> class="nav-link">Mon panier</a></li>
@@ -41,9 +44,7 @@
                   <li class="dropdown-item"><a href=<%=new_user_registration_path %> class="nav-link">Sign up</a></li>
                   <li class="dropdown-item"><a href=<%=new_user_session_path %> class="nav-link">Sign in</a></li>
                 <% end %>
-                <% if current_user.admin? %>
-                <li class="nav-item"><a href="/admin" class="btn btn-success">Ajouter un produit</a></li>
-                <% end %>        
+      
               </ul>
             </li>
           </ul>

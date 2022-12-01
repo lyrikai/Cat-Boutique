@@ -16,18 +16,13 @@
 
   <a href="<%= product_path(i.id)%>" class="btn btn-outline-primary">Voir l'image</a>
   <%= link_to 'Supprimer du panier', cart_path(i), data: {turbo_method: :delete}, class:"btn btn-outline-danger" %>
+  <% if i.product.image.attached? %>
+    <%= image_tag i.product.image %>
+  <% end %>
    <p> ----------------- </p>
   <% end%>
 
   <p>Total: <%= a%>€</p>
 
-<% if i.product.image.attached? %>
-  <%= image_tag i.product.image %>
-<% end %>
-
-<%= link_to 'Supprimer du panier', cart_path(i), data: {turbo_method: :delete} %>
- <p> ----------------- </p>
-<% end%>
-
-  <%= button_to "Payer", checkout_create_path(total: a),data: { turbo: false }, class: "btn btn-outline-primary"%>
+    <%= button_to "Payer", checkout_create_path(total: a),data: { turbo: false }, class: "btn btn-outline-primary"%>
 </div>
