@@ -26,10 +26,12 @@
     </div>
 
     <% @catlist.each do |i| %>
+
     <p> <%=i.title%></p>
    
     <a href="<%= product_path(i.id)%>">Voir l'image</a>
     <p>-----------</p>
+    
     <%end%>
 </div>
 
