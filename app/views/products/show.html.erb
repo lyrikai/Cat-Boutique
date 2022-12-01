@@ -4,7 +4,9 @@
 <p><%= @prod.description%></p>
 <p><%= @prod.price%></p>
 <p><%= @prod.stock%></p>
-
+<% if @prod.image.attached? %>
+  <%= image_tag @prod.image %>
+<% end %>
 <p><%= @prod.stock%>add </p>
 
 

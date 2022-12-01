@@ -15,11 +15,9 @@ Cart.destroy_all
 
 end
 productsf = Product.first.id
-userf = User.first.id
+userff = User.first.id
 
 20.times do
-    userff = User.find(1)
-
     productsrand = rand(0..19) 
     productstotal = productsrand + productsf
     productsff = Product.find(productstotal)
