@@ -26,7 +26,11 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href=<%=root_path %>>Home</a>
             </li>
-
+            <% if user_signed_in? %>
+              <% if current_user.admin? %>
+                <li class="nav-item"><a href="/admin" class="btn btn-success">Ajouter un produit</a></li>
+              <% end %>     
+            <% end %>
             <li class="nav-item dropdown" >
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Compte
@@ -39,11 +43,9 @@
                 <% else %>
                   <li class="dropdown-item"><a href=<%=new_user_registration_path %> class="nav-link">Sign up</a></li>
                   <li class="dropdown-item"><a href=<%=new_user_session_path %> class="nav-link">Sign in</a></li>
-                <% end %>
-                <% if current_user.admin? %>
-                <li class="nav-item"><a href="/admin" class="btn btn-success">Ajouter un produit</a></li>
-                <% end %>        
+                <% end %>   
               </ul>
+    
             </li>
           </ul>
         </div>
